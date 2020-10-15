@@ -24,8 +24,9 @@ closeButton.addEventListener("click", () => {
 });
 
 // Call the closeModal function when anywhere outside of the modal is clicked
-window.addEventListener("click", () => {
-  if (event.target === modal) {
+var modal = document.getElementById("signup-modal");
+window.onclick = function(event){
+  if(event.target == modal){
     closeModal();
   }
-});
+}
